@@ -1,33 +1,34 @@
-//Made by:Adam Barta
+//Made by:Adam Tretera
 import java.util.Scanner;
-public class ObsahGraficky {
+public class Obsahgraficky {
+
+   
     public static void main(String[] args) {
-        String sirka;
-        String vyska;
-        int sirkaCislo;
-        int vyskaCislo;
-        int obsah;
+ String cislo1;
+ String cislo2;
 
-        Scanner scanner = new Scanner(System.in,"Windows-1250");
-        System.out.println("Zadej sirku:");
-        sirka = scanner.nextLine();
-        System.out.println("Zadej vysku:");
-        vyska = scanner.nextLine();
 
-        vyskaCislo = Integer.parseInt(vyska);
-        sirkaCislo = Integer.parseInt(sirka);
+ int hodnota1;
+ int hodnota2;
+ int obsah;
 
-        obsah = vyskaCislo*sirkaCislo;
-        System.out.println("Obsah je "+obsah);
-        
-        for (int y = 0; y < vyskaCislo; y++){
+ Scanner scanner = new Scanner(System.in,"Windows-1250");
+ System.out.println("Zadej cislo pro delku");
+ cislo1 = scanner.nextLine();
+ hodnota1 = Integer.parseInt(cislo1);
+ System.out.println("Zadej cislo pro sirku");
+ cislo2 = scanner.nextLine();
+ hodnota2 = Integer.parseInt(cislo2);
+ int i=0;
+ for (i=0; i<hodnota1; i++) {
+    System.out.println(""); //zapisuje se pouze šířka
+     for (int y=0; y<hodnota2; y++ ){
+     System.out.print("*");}
+ }
+    obsah=hodnota1*hodnota2;
 
-            for (int i = 0; i < sirkaCislo; i++) {
-                System.out.print("* ");
-           }
-            
-            System.out.println("");
-        }
-
+    System.out.println("");
+    System.out.println ("Obsah je"+obsah);
     }
 }
+
